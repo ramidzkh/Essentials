@@ -12,4 +12,5 @@ Paste the following files in this directory
 | Terraria.Libraries.RailSDK.Windows.RailSDK.Net.dll            | From inside the TerrariaServer embedded resources |
 | Terraria.Libraries.ReLogic.ReLogic.dll                        | From inside the TerrariaServer embedded resources |
 | Terraria.Libraries.Steamworks.NET.Windows.Steamworks.NET.dll  | From inside the TerrariaServer embedded resources |
+| Terraria.exe                                                  | Terraria client (Optional, for local features)    |
 | TerrariaServer.exe                                            | Terraria server                                   |
