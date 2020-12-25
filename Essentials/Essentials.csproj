@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')"/>
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+        <ProjectGuid>{15593FB7-862B-4E28-86D2-6EDF14955EC8}</ProjectGuid>
+        <OutputType>Library</OutputType>
+        <AppDesignerFolder>Properties</AppDesignerFolder>
+        <RootNamespace>Essentials</RootNamespace>
+        <AssemblyName>Essentials</AssemblyName>
+        <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+        <FileAlignment>512</FileAlignment>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>full</DebugType>
+        <Optimize>false</Optimize>
+        <OutputPath>bin\Debug\</OutputPath>
+        <DefineConstants>DEBUG;TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugType>pdbonly</DebugType>
+        <Optimize>true</Optimize>
+        <OutputPath>bin\Release\</OutputPath>
+        <DefineConstants>TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <ItemGroup>
+        <Reference Include="Ionic.Zip.CF, Version=1.9.1.8, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c">
+            <HintPath>..\Libraries\Terraria.Libraries.DotNetZip.Ionic.Zip.CF.dll</HintPath>
+        </Reference>
+        <Reference Include="Microsoft.Xna.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553">
+            <HintPath>..\Libraries\Microsoft.Xna.Framework.dll</HintPath>
+        </Reference>
+        <Reference Include="Microsoft.Xna.Framework.Game, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553">
+            <HintPath>..\Libraries\Microsoft.Xna.Framework.Game.dll</HintPath>
+        </Reference>
+        <Reference Include="Microsoft.Xna.Framework.Graphics, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553">
+            <HintPath>..\Libraries\Microsoft.Xna.Framework.Graphics.dll</HintPath>
+        </Reference>
+        <Reference Include="Microsoft.Xna.Framework.Xact, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553">
+            <HintPath>..\Libraries\Microsoft.Xna.Framework.Xact.dll</HintPath>
+        </Reference>
+        <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed">
+            <HintPath>..\Libraries\Terraria.Libraries.JSON.NET.Newtonsoft.Json.dll</HintPath>
+        </Reference>
+        <Reference Include="RailSDK.Net, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <HintPath>..\Libraries\Terraria.Libraries.RailSDK.Windows.RailSDK.Net.dll</HintPath>
+        </Reference>
+        <Reference Include="ReLogic, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <HintPath>..\Libraries\Terraria.Libraries.ReLogic.ReLogic.dll</HintPath>
+        </Reference>
+        <Reference Include="Steamworks.NET, Version=9.1.0.0, Culture=neutral, PublicKeyToken=null">
+            <HintPath>..\Libraries\Terraria.Libraries.Steamworks.NET.Windows.Steamworks.NET.dll</HintPath>
+        </Reference>
+        <Reference Include="System"/>
+        <Reference Include="System.Core"/>
+        <Reference Include="System.Data"/>
+        <Reference Include="System.Xml"/>
+        <Reference Include="TerrariaServer, Version=1.4.1.2, Culture=neutral, PublicKeyToken=null">
+            <HintPath>..\Libraries\TerrariaServer.exe</HintPath>
+        </Reference>
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="Command\Arguments.cs"/>
+        <Compile Include="Command\CommandManager.cs"/>
+        <Compile Include="Command\InfoCommand.cs"/>
+        <Compile Include="Command\ExecuteCommand.cs"/>
+        <Compile Include="Command\Source.cs"/>
+        <Compile Include="Command\TeleportCommand.cs"/>
+        <Compile Include="Extensions\IPlayerExtension.cs"/>
+        <Compile Include="Extensions\PlayerExtensions.cs"/>
+        <Compile Include="Mixins\GeneratedTargets.cs"/>
+        <Compile Include="Mixins\HelpCommandMixin.cs"/>
+        <Compile Include="Mixins\ItemMixin.cs"/>
+        <Compile Include="Mixins\MainMixin.cs"/>
+        <Compile Include="Mixins\NPCMixin.cs"/>
+        <Compile Include="Mixins\PlayerMixin.cs"/>
+        <Compile Include="Mixins\ProjectileMixin.cs"/>
+        <Compile Include="Mixins\SayChatCommandMixin.cs"/>
+        <Compile Include="Mixins\WorldGenMixin.cs"/>
+        <Compile Include="Properties\AssemblyInfo.cs"/>
+    </ItemGroup>
+    <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
+    <ItemGroup>
+        <PackageReference Include="NBrigadier" Version="1.0.17.1"/>
+        <PackageReference Include="SharpILMixins.Annotations" Version="1.2.4"/>
+    </ItemGroup>
+    <ItemGroup>
+        <EmbeddedResource Include="mixins.json"/>
+        <AdditionalFiles Include="mixins.json"/>
+    </ItemGroup>
+    <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+         Other similar extension points exist, see Microsoft.Common.targets.
+    <Target Name="BeforeBuild">
+    </Target>
+    <Target Name="AfterBuild">
+    </Target>
+    -->
+</Project>

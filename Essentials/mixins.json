@@ -1,0 +1,16 @@
+﻿{
+  "namespace": "Essentials.Mixins",
+  "targets": [
+    "TerrariaServer.exe"
+  ],
+  "mixins": [
+    "HelpCommandMixin",
+    "ItemMixin",
+    "MainMixin",
+    "NPCMixin",
+    "PlayerMixin",
+    "ProjectileMixin",
+    "SayChatCommandMixin",
+    "WorldGenMixin"
+  ]
+}
