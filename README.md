@@ -6,7 +6,7 @@ An essential server-side Terraria mod
 
 The GAC (Global Assembly Cache) is found in `%windir%/Microsoft.NET/assembly`, from where the four Xna DLLs can be
 found. The other Terraria dependencies are embedded inside the Terraria client or server, and can be extracted with a
-program like ILSpy. Copy the dependencies required by `Libraries/README.md`
+program like [ILSpy](https://github.com/icsharpcode/ILSpy). Copy the dependencies required by `Libraries/README.md`
 
 ## Client setup
 
@@ -24,4 +24,5 @@ Then follow the instructions below
 1. Run `msbuild`
 2. Open a command prompt in `Essentials/bin/Debug`
 3. Run `sharpilmixins -t . -m Essentials.dll`
-4. The generated `TerrariaServer-out.exe` (or `Terraria-out.exe`) should be suitable to replace the original Terraria client or server
+4. The generated `TerrariaServer-out.exe` (or `Terraria-out.exe`) should be suitable to replace the original Terraria
+   client or server. Also, copy `NBrigadier.dll` into the same folder as the executable
