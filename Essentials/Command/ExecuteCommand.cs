@@ -14,6 +14,8 @@ namespace Essentials.Command
                 .Then(Literal("as")
                     .Then(Argument("player", PlayerArgumentType.Instance)
                         .RedirectNode(node, context => new Source(PlayerArgumentType.GetValue(context, "player")))))
+                .Then(Literal("asc")
+                    .RedirectNode(node, context => new Source(null)))
             );
         }
     }

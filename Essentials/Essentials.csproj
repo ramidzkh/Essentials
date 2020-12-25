@@ -72,6 +72,7 @@
         <Compile Include="Command\CommandManager.cs" />
         <Compile Include="Command\InfoCommand.cs" />
         <Compile Include="Command\ExecuteCommand.cs" />
+        <Compile Include="Command\RespawnCommand.cs" />
         <Compile Include="Command\Source.cs" />
         <Compile Include="Command\TeleportCommand.cs" />
         <Compile Include="Extensions\IPlayerExtension.cs" />

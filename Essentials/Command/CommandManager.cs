@@ -12,6 +12,7 @@ namespace Essentials.Command
         {
             InfoCommand.Register();
             ExecuteCommand.Register();
+            RespawnCommand.Register();
             TeleportCommand.Register();
         }
 
