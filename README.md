@@ -21,8 +21,8 @@ Then follow the instructions below
 ## Setup
 
 1. Install [`SharpILMixins.Processor`](https://www.nuget.org/packages/SharpILMixins.Processor/) (`dotnet tool install --global SharpILMixins.Processor`)
-1. Run `msbuild`
-2. Open a command prompt in `Essentials/bin/Debug`
+1. Run `dotnet build`
+2. Open a command prompt in `Essentials/bin/Debug/net472`
 3. Run `sharpilmixins -t . -m Essentials.dll`
 4. The generated `TerrariaServer-out.exe` (or `Terraria-out.exe`) should be suitable to replace the original Terraria
    client or server. Also, copy `NBrigadier.dll` into the same folder as the executable
