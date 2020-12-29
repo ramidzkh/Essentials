@@ -4,8 +4,8 @@ using System.Linq;
 using Microsoft.Xna.Framework;
 using NBrigadier;
 using NBrigadier.Arguments;
+using NBrigadier.CommandSuggestion;
 using NBrigadier.Context;
-using NBrigadier.Suggestion;
 using Terraria;
 
 namespace Essentials.Command
@@ -29,14 +29,11 @@ namespace Essentials.Command
             return Suggestions.Empty();
         }
 
-        public IList<string> GetExamples()
-        {
-            return new List<string>();
-        }
+        public ICollection<string> Examples { get; } = new List<string>();
 
         public static Player GetValue<TS>(CommandContext<TS> context, string name)
         {
-            return context.GetArgument<Player>(name);
+            return context.GetArgument<Player>(name, typeof(Player));
         }
     }
 
@@ -61,14 +58,11 @@ namespace Essentials.Command
             return Suggestions.Empty();
         }
 
-        public IList<string> GetExamples()
-        {
-            return new List<string>();
-        }
+        public ICollection<string> Examples { get; } = new List<string>();
 
         public static Vector2 GetValue<TS>(CommandContext<TS> context, string name)
         {
-            return context.GetArgument<Vector2>(name);
+            return context.GetArgument<Vector2>(name, typeof(Vector2));
         }
     }
 }

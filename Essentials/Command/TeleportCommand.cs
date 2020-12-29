@@ -21,7 +21,7 @@ namespace Essentials.Command
                     })));
 
             Dispatcher.Register(Literal("tp")
-                .RedirectNode(node));
+                .Redirect(node));
 
             Dispatcher.Register(Literal("back")
                 .RequiresPlayer()

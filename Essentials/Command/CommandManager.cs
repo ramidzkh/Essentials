@@ -20,7 +20,7 @@ namespace Essentials.Command
 
         public static LiteralArgumentBuilder<Source> Literal(string literal)
         {
-            return LiteralArgumentBuilder<Source>.LiteralBuilder(literal);
+            return LiteralArgumentBuilder<Source>.Literal(literal);
         }
 
         public static RequiredArgumentBuilder<Source, T> Argument<T>(string name, IArgumentType<T> argumentType)

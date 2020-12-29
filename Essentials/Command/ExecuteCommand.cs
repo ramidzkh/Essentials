@@ -10,12 +10,12 @@ namespace Essentials.Command
 
             Dispatcher.Register(Literal("execute")
                 .Then(Literal("run")
-                    .RedirectNode(Dispatcher.Root))
+                    .Redirect(Dispatcher.Root))
                 .Then(Literal("as")
                     .Then(Argument("player", PlayerArgumentType.Instance)
-                        .RedirectNode(node, context => new Source(PlayerArgumentType.GetValue(context, "player")))))
+                        .Redirect(node, context => new Source(PlayerArgumentType.GetValue(context, "player")))))
                 .Then(Literal("asc")
-                    .RedirectNode(node, context => new Source(null)))
+                    .Redirect(node, context => new Source(null)))
             );
         }
     }
